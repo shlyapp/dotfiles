@@ -27,6 +27,14 @@ bindsym $mod+d exec rofi -show drun
 
 for_window [class=".*"] border pixel 4
 
+# start a terminal (alacritty)
+#bndsym $mod+Return exec --no-startup-id alacritty
+# start a terminal in floating mode
+bindsym $mod+Shift+Return exec --no-startup-id alacritty --class floating
+for_window [class="floating"] floating enabled move position center
+# enable startup in float from exec by setting the x11 class to floating
+# many apps support '--class floating' for setting the x11 class (the instance get renamed)
+
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+l focus up
